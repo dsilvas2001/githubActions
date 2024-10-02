@@ -16,7 +16,7 @@ jobs:
       - name: touch File
         run: touch file.txt
       - name: write text
-        run: echo "Prueba 5" >> file.txt
+        run: echo "Mejorar File" >> file.txt
       - name: Read File
         run: cat file.txt
 
@@ -24,5 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [hola]
     steps:
-      - name: Prueba
-        run: echo "hola"
+      - name: Checkout
+        uses: actions/checkout@v4.2.0
+      - name: Leer
+        run: ls
