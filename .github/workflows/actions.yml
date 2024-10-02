@@ -16,7 +16,7 @@ jobs:
       - name: touch File
         run: touch file.txt
       - name: write text
-        run: echo "Prueba 1" >> file.txt
+        run: echo "Prueba 5" >> file.txt
       - name: Read File
         run: cat file.txt
 
