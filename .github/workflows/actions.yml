@@ -1,30 +1,13 @@
 name: Prueba
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push]
 jobs:
   hola:
     runs-on: ubuntu-latest
     steps:
       - name: Hola Mundo
-        run: echo "eeee"
-      - name: touch File
-        run: touch file.txt
-      - name: write text
-        run: echo "Mejorar File" >> file.txt
-      - name: Read File
-        run: cat file.txt
-
-  others:
-    runs-on: ubuntu-latest
-    needs: [hola]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.2.0
-      - name: Leer
-        run: ls -a
+        run: |
+          echo "eeee"
+          touch lista.txt
+          echo " por mi madre" >> lista.txt
+          cat lista.txt
